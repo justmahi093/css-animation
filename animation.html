@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Animation</title>
+
+    <style>
+        
+        .field{
+            border: 1px solid black;
+        }
+        .field:hover .bat{
+            transform: rotate(-30deg);
+            transform-origin: top right;
+        }
+        .bat{
+            width: 35%;
+            transition:transform .3s;
+        }
+        .ball{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            position: relative;
+            left: 300px;
+            transition: transform 1s ease-out .2s;
+        }
+        .field:hover .ball{
+            transform: translate(500px,-100px);
+        }
+        .field h1{
+            display: none;
+        }
+        .field:hover h1{
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+    
+   
+    <div class="field">
+        <img class="bat" src="../pseudo-box/bat.jpg" alt="">
+        <div class="ball"></div>
+        <h1>Wow nice shot!</h1>
+    </div>
+
+
+</body>
+</html>
